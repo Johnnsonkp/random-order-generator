@@ -22,12 +22,26 @@ while true
         group.push(name)
         # group << name
     when 2 
-        copied_group = group.clone
-        while copied_group.length > 0
-            random_index = rand((copied_group.length - 1))
-            puts copied_group[random_index]
-            copied_group.delete_at(random_index)
+        random_group_running = true
+        while random_group_running
+            copied_group = group.clone
+            while copied_group.length > 0
+                random_index = rand((copied_group.length - 1))
+                puts copied_group[random_index]
+                copied_group.delete_at(random_index)
+            end
+            puts "Press 1 to regenerate order"
+            puts "Press 2 to quit"
+            puts "Press any other key to regenrate order"
+            random_group_menu_choice == gets.chomp.to_i
+            if random_group_menu_choice == 2
+                random_group_running = false
+            elsif random_group_menu_choice == 2
+                exit
+            end
+
         end
+        
     when 3
         puts "Are you sure, type 'yes' to quite"
         quit_choice = gets.chomp
@@ -39,3 +53,5 @@ while true
     gets
     system "clear"
 end
+
+puts "Goodbye"
