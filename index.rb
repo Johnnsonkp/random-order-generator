@@ -2,8 +2,8 @@
 # DATA: Array of names
 # OUTPUT: Size of class, Menu, names, prompts for quit
 # ADD PERSON IMPLEMENTATION: User input, add to array .push?
-# RANDOM ORDER IMPLEMENTATION: Copy array, select random name 
-#   get name at random index, delete name from array, delete name for array, keep going until array 
+# RANDOM ORDER IMPLEMENTATION: Copy array, select random name - get random index
+#   get name at random index, delete name from array, delete name for array, keep going until array ==0
 
 #an array
 group = []
@@ -22,7 +22,12 @@ while true
         group.push(name)
         # group << name
     when 2 
-        puts "You pressed 2"
+        copied_group = group.clone
+        while copied_group.length > 0
+            random_index = rand((copied_group.length - 1))
+            puts copied_group[random_index]
+            copied_group.delete_at(random_index)
+        end
     when 3
         puts "You pressed 3"
         break
