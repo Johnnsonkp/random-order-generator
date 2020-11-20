@@ -27,7 +27,7 @@ while true
             copied_group = group.clone
             while copied_group.length > 0
                 random_index = rand((copied_group.length - 1))
-                puts copied_group[random_index]
+                puts copied_group[random_index].capitalize
                 copied_group.delete_at(random_index)
             end
             puts "Press 1 to regenerate order"
@@ -41,7 +41,7 @@ while true
             end
 
         end
-        
+
     when 3
         puts "Are you sure, type 'yes' to quite"
         quit_choice = gets.chomp
