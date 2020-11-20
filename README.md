@@ -1,0 +1,23 @@
+# Student Randomizer:
+
+## Requirement
+- Needs to use loops where possibly (no iterators)
+- All variables in snake_case. Follow ruby conventions
+- Take names as input
+- See the size of the class
+- Produce a random order 
+- Has to be able to output to the screen
+- Store the names
+- A rudimentary menu
+
+## Extras (sprinkles)
+- pause between output names
+- Add data formating
+- Read a external file
+- Write a external file
+- Read out each name
+
+## Implementation Details
+- Use pop
+
+#read.md/ flowchart/ pseudo code
